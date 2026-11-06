@@ -1,0 +1,56 @@
+PROYECTO: MANOS COMUNITARIAS
+
+¿De qué trata?
+Es una página web que ayuda a las personas de una comunidad a compartir artículos y solicitar apoyo. Se pueden publicar ofertas o necesidades de ropa, útiles escolares, alimentos no perecederos, muebles y servicios.
+
+REQUISITOS
+- XAMPP con Apache y MySQL.
+- PHP 8 o superior recomendado.
+- Navegador web.
+
+INSTALACIÓN EN XAMPP
+1. Descomprime la carpeta Manos_Comunitarios.
+2. Copia la carpeta dentro de C:\xampp\htdocs\
+3. Abre XAMPP y enciende Apache y MySQL.
+4. Entra a http://localhost/phpmyadmin/
+5. Selecciona la pestaña Importar.
+6. Elige el archivo database.sql de la carpeta del proyecto y pulsa Importar.
+7. Abre en Chrome:
+   http://localhost/Manos_Comunitarios/public/
+
+ESTRUCTURA
+Manos_Comunitarios/
+  config/
+    bootstrap.php
+    database.php
+  public/
+    index.php
+    styles.css
+    app.js
+  database.sql
+  LEEME.txt
+
+FUNCIONES
+- Crear cuenta e iniciar sesión.
+- Publicar algo que ofreces o necesitas.
+- Ver publicaciones de la comunidad.
+- Mostrar interés en una publicación.
+- Marcar como completada una publicación propia.
+
+NOTAS
+- La configuración predeterminada de MySQL es usuario root y contraseña vacía, como suele venir XAMPP.
+- Si tu MySQL tiene otra contraseña, cambia $usuario y $password en config/database.php.
+- La página funciona primero en localhost; para que otras personas entren desde Internet se necesita contratar/configurar un servicio de alojamiento.
+- Por seguridad, no publiques domicilios exactos ni contraseñas reales en capturas o entregas.
+
+
+ACTUALIZACIÓN PARA FOTOS DE DONACIONES
+1. En phpMyAdmin, selecciona la base de datos manos_comunitarios.
+2. Abre la pestaña SQL.
+3. Copia y ejecuta el contenido de actualizar_base_datos.sql.
+4. Reemplaza los archivos del proyecto en htdocs por los de esta versión.
+5. Para publicar una donación, inicia sesión y usa el campo "Foto de la donación".
+6. Las fotos se guardan en public/uploads y se pueden pulsar para verlas ampliadas.
+
+La foto es opcional. Se aceptan JPG, PNG y WEBP de hasta 4 MB.
+No ejecutes actualizar_base_datos.sql más de una vez, porque la columna ya habrá sido creada.

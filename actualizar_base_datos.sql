@@ -1,0 +1,1 @@
+USE manos_comunitarios;\n\n-- Ejecuta este cambio una sola vez para permitir fotos en las publicaciones.\nALTER TABLE posts ADD COLUMN image_path VARCHAR(255) NULL;\n
